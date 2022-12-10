@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fa/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link type="image/png" href="faviconCat.png" rel="shortcut icon">
+    <title>Котейкины породы</title>
+</head>
+<body>
+    <header>
+        <h1>Котейкины породы</h1><button data-set class="buttonStyle">Добавить котея</button>
+    </header>
+    <section data-section></section>
+    <div data-openAddCat class="addCatPop">
+        <div class="addCatPop__body">
+            <form class="addCatPop__form" name="addCat">
+                <i data-closeAddCat class="close fa-solid fa-rectangle-xmark"></i>
+                <input type="text" name="name" placeholder="ПОРОДА" required>
+                <input type="number" name="rate" placeholder="РЕЙТИНГ (ОТ 1 до 10)" required>
+                <textarea placeholder="ОПИСАНИЕ" name="description" required></textarea>
+                <input type="text" name="img_link" placeholder="ССЫЛКА НА ИЗОБРАЖЕНИЕ" required>
+                <input type="submit" value="СОЗДАТЬ КОТЕЯ" >
+            </form>
+        </div>
+    </div>
+    <div data-selectedCat class="selectedCatPop">
+        <div class="selectedCatPop__body">
+            <form class="selectedCatPop__content">
+                <i data-closeSelectedCat class="close fa-solid fa-rectangle-xmark"></i>
+                <img data-img alt="Здесь должен быть котей">
+                <div class="selectedCatPop__info">
+                    <div class="selectedCatPop__info-top">
+                        <div data-id></div>
+                        <h3 class="h3" >Порода котейки: <span data-name></span></h3>
+                    </div>
+                    <div class="selectedCatPop__info-mid">
+                        <p data-descr></p>
+                    </div>
+                    <div class="selectedCatPop__info-bot">
+                        <div data-rate class="selectedCatPop__info-rate"></div>
+                        <i data-editCat class="edit fa-solid fa-pen" title="Корректировать кота"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div data-confirmation class="addCatPop">
+        <div class="addCatPop__body">
+            <div class="addCatPop__form">
+                <h3>Неужели вы хотите удалить котэ?</h3>
+                <button data-delCat class="buttonConfirmation delCat">Удалить вашпе!</button>
+                <button data-noDelCat class="buttonConfirmation noDelCat">Я передумаль</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
